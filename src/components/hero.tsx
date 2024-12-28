@@ -2,16 +2,14 @@ export const HeroComponent = () => {
   return (
     <section className="bg-primary relative">
       <div
-        className="px-8 h-[80dvh] 2xl:max-w-7xl mx-auto"
+        className="px-8 h-[80dvh] 2xl:max-w-7xl mx-auto grid grid-cols-3 justify-end"
         data-aos="fade-up"
         data-aos-duration="2000"
       >
-        <h1
-          className="text-[10dvh] text-secondary font-extrabold"
-          id="heading-svg-text"
-        >
+        <h1 className="" id="heading-svg-text">
           PORTFOLIO
         </h1>
+        <div className="h-full w-full bg-secondary col-span-2 rounded-xl"></div>
       </div>
       <div className="px-8 2xl:max-w-7xl mx-auto pb-12 relative">
         <div className="mt-6 space-y-2">
