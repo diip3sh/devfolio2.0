@@ -21,17 +21,16 @@ const workExperience = [
 
 export const WorkExperienceCompoent = () => {
   return (
-    <section className="bg-primary">
+    <section className="bg-primary-light dark:bg-primary-dark">
       <div className="px-8 2xl:max-w-7xl mx-auto py-6">
         <div className="mt-6 space-y-2">
-          <div className="h-0.5 bg-secondary"></div>
-          <h3 className="text-secondary text-base font-medium">
-            <span>work</span>
-            <span className="font-bold">Experience</span>
+          <div className="h-0.5 bg-secondary-light dark:bg-secondary-dark"></div>
+          <h3 className="text-secondary-light dark:text-secondary-dark text-base font-medium">
+            <span>work</span> <span className="font-bold">Experience</span>
           </h3>
-          <div className="h-1.5 bg-secondary"></div>
+          <div className="h-1.5 bg-secondary-light dark:bg-secondary-dark"></div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6 pt-2 mt-2">
+        <div className="grid grid-cols-1 lg:grid-cols-4 text-secondary-light dark:text-secondary-dark gap-6 pt-2 mt-2">
           {workExperience.map((opinion) => (
             <div>
               <p className="italic text-2xl block font-bold">

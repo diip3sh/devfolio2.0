@@ -1,9 +1,9 @@
 // export const IntroComponent = () => {export const first = 'first'}
 export const IntroComponent = () => {
   return (
-    <section className="bg-primary">
+    <section className="bg-primary-light dark:bg-primary-dark">
       <div className="px-8 2xl:max-w-7xl mx-auto py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 text-secondary-light dark:text-secondary-dark gap-6">
           <p
             className="text-base lg:col-start-2 leading-relaxed"
             data-aos="fade-up"

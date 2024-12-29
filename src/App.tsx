@@ -1,11 +1,12 @@
-import { useEffect } from "react";
-import { WorkExperienceCompoent } from "./components/experience";
-import { FeatureComponent } from "./components/features";
-import { HeroComponent } from "./components/hero";
-import { IntroComponent } from "./components/intro";
-import { ProjectComponent } from "./components/project";
+// import { useEffect } from "react";
+import { HeroComponent } from "./pages/hero";
+import { IntroComponent } from "./pages/intro";
+import { ProjectComponent } from "./pages/project";
+import { WorkExperienceCompoent } from "./pages/experience";
+import { FeatureComponent } from "./pages/features";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
+import { ThemeProvider } from "./components/theme-provider.tsx";
 
 function App() {
   // useEffect(() => {
@@ -14,11 +15,13 @@ function App() {
 
   return (
     <>
-      <HeroComponent />
-      <IntroComponent />
-      <ProjectComponent />
-      <WorkExperienceCompoent />
-      <FeatureComponent />
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <HeroComponent />
+        <IntroComponent />
+        <ProjectComponent />
+        <WorkExperienceCompoent />
+        <FeatureComponent />
+      </ThemeProvider>
     </>
   );
 }
