@@ -1,18 +1,4 @@
-const features = [
-  {
-    url: "https://github.com/magicuidesign/magicui/issues/129",
-    title: "MagicUI",
-  },
-  {
-    url: "",
-    title: "Tamagui",
-  },
-  {
-    url: "https://github.com/Bashamega/ebookCraft",
-    title: "ebookCraft",
-  },
-  // Add more features as needed...
-];
+import { FEATURES } from "../utlis/constant";
 
 export const FeatureComponent = () => {
   return (
@@ -61,7 +47,7 @@ export const FeatureComponent = () => {
         </div>
 
         <ul className="mx-auto flex text-left gap-3 items-start text-secondary-light dark:text-secondary-dark mt-3">
-          {features.map((template) => (
+          {FEATURES.map((template) => (
             <>
               <li className="flow-root col-span-full h-full ">
                 <a href={template.url}>

@@ -1,7 +1,7 @@
 import { GsapMagnetic } from "../components/animations/gsap-magentic";
 import LiveClockUpdate from "../components/live-clock";
 import { useThemeStore } from "../store/use-theme-store";
-import { SocialsSVG } from "../utlis/constant";
+import { SOCIALS_ICON_SVG } from "../utlis/constant";
 
 export const HeroComponent = () => {
   const { theme, setTheme } = useThemeStore();
@@ -33,7 +33,7 @@ export const HeroComponent = () => {
             LIO
           </span>
         </h1>
-        {/* <div className="h-full w-full bg-secondary-light dark:secondary-dark col-span-2 rounded-xl"></div> */}
+        <div className="h-full w-full bg-secondary-light dark:secondary-dark col-span-2 rounded-xl"></div>
       </div>
 
       <div className="2xl:max-w-7xl mx-auto pb-12 relative">
@@ -61,7 +61,7 @@ export const HeroComponent = () => {
             </div>
             <div>
               <ul className="items-center inline-flex gap-3 relative">
-                {SocialsSVG.map((item, index) => (
+                {SOCIALS_ICON_SVG.map((item, index) => (
                   <li key={index}>
                     <a
                       href={item.link}

@@ -1,18 +1,19 @@
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { HeroComponent } from "./pages/hero";
 import { IntroComponent } from "./pages/intro";
 import { ProjectComponent } from "./pages/project";
 import { WorkExperienceCompoent } from "./pages/experience";
 import { FeatureComponent } from "./pages/features";
 import { useThemeStore } from "./store/use-theme-store";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const { theme } = useThemeStore();
-  // useEffect(() => {
-  //   AOS.init();
-  // }, []);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   return (
     <div className={theme}>

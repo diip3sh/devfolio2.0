@@ -1,4 +1,4 @@
-export const SocialsSVG = [
+export const SOCIALS_ICON_SVG = [
   {
     link: "https://github.com/pilladipesh33",
     svg: (
@@ -72,5 +72,70 @@ export const SocialsSVG = [
         ></path>
       </svg>
     ),
+  },
+];
+
+export const OTHERPROJECTS = [
+  {
+    url: "",
+    title: "Converter",
+    description:
+      "A set of 161 elements & layouts made with Tailwind CSS and Alpine.js. Skillfully designed with an eye for aesthetics, offering an excellent starting point for your upcoming project.",
+  },
+  {
+    url: "",
+    title: "Car Deals",
+    description:
+      "A set of 161 elements & layouts made with Tailwind CSS and Alpine.js. Skillfully designed with an eye for aesthetics, offering an excellent starting point for your upcoming project.",
+  },
+  {
+    url: "https://note-it-omega.vercel.app",
+    title: "Note.it",
+    description:
+      "Your all-in-one digital workspace. Seamlessly organize, collaborate, and bring ideas to life. Customizable pages, powerful databases, and real-time collaboration make productivity effortless. Transform your workflow across devices with Note.it",
+  },
+  {
+    url: "",
+    title: "SVG Doodles",
+    description:
+      "A free collection of 208 super duper SVG doodles for your creative projects.",
+  },
+  // Add more projects as needed...
+];
+
+export const FEATURES = [
+  {
+    url: "https://github.com/magicuidesign/magicui/issues/129",
+    title: "MagicUI",
+  },
+  {
+    url: "",
+    title: "Tamagui",
+  },
+  {
+    url: "https://github.com/Bashamega/ebookCraft",
+    title: "ebookCraft",
+  },
+  // Add more features as needed...
+];
+
+export const WORK_EXPERIENCE = [
+  {
+    name: "BridgeLabz Solution",
+    role: "React Native Intern",
+    opinion:
+      "As an intern, I delved into native mobile app development, mastering React Native, CSS, and Redux. My inaugural project—a note-taking app—provided hands-on experience in app architecture and functionality. This foundational project honed my skills in mobile development technologies and best practices.",
+  },
+  {
+    name: "Emids Technologies",
+    role: "Software Engineer",
+    opinion:
+      "As a React Native developer, I led a team of 5-7 developers in creating a Malnutrition Awareness App. This real-world project challenged my skills, as I initiated tasks and ensured a user-friendly, real-time application. The app aimed to educate people about malnutrition effectively.",
+  },
+  {
+    name: "Meon Technologies",
+    role: "React Native Developer",
+    opinion:
+      "As a seasoned React Native developer, I simultaneously managed 3-4 projects, taking charge of product development. My focus was on creating mobile apps for the finance and wealth sector, demonstrating versatility and leadership in high-stakes environments.",
   },
 ];

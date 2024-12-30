@@ -1,30 +1,4 @@
-const otherprojects = [
-  {
-    url: "https://note-it-omega.vercel.app",
-    title: "Note.it",
-    description:
-      "Your all-in-one digital workspace. Seamlessly organize, collaborate, and bring ideas to life. Customizable pages, powerful databases, and real-time collaboration make productivity effortless. Transform your workflow across devices with Note.it",
-  },
-  {
-    url: "https://www.windstatic.com/",
-    title: "Windstatic",
-    description:
-      "A set of 161 elements & layouts made with Tailwind CSS and Alpine.js. Skillfully designed with an eye for aesthetics, offering an excellent starting point for your upcoming project.",
-  },
-  {
-    url: "https://www.colorsandfonts.com/",
-    title: "Colors & Fonts",
-    description:
-      "Color and typography resources and inspiration for Web Developers and Digital Designers.",
-  },
-  {
-    url: "https://www.svgdoodles.com/",
-    title: "SVG Doodles",
-    description:
-      "A free collection of 208 super duper SVG doodles for your creative projects.",
-  },
-  // Add more projects as needed...
-];
+import { OTHERPROJECTS } from "../utlis/constant";
 
 export const ProjectComponent = () => {
   function calculateAosDuration(index: number) {
@@ -34,7 +8,6 @@ export const ProjectComponent = () => {
     <section className="bg-primary-light dark:bg-primary-dark">
       <div className="px-8 2xl:max-w-7xl mx-auto py-32">
         <div className="space-y-2">
-          {/* <!-- Section Title and Decorative Elements --> */}
           <div
             className="h-0.5 bg-secondary-light dark:bg-secondary-dark"
             data-aos="fade-up"
@@ -53,7 +26,7 @@ export const ProjectComponent = () => {
           className="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary-light dark:text-secondary-dark md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-32"
           role="list"
         >
-          {otherprojects.map((project, index) => (
+          {OTHERPROJECTS.map((project, index) => (
             <li
               className="flow-root h-full"
               data-aos="fade-up"
