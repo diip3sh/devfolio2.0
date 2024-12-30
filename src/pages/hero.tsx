@@ -1,23 +1,12 @@
-import { useTheme } from "../components/theme-provider";
+import { useThemeStore } from "../store/use-theme-store";
 
 export const HeroComponent = () => {
-  const { setTheme } = useTheme();
-  function handleClick() {
-    if (localStorage.theme === "dark" || !("theme" in localStorage)) {
-      //add class=dark in html element
-      document.documentElement.classList.add("dark");
-    } else {
-      //remove class=dark in html element
-      document.documentElement.classList.remove("dark");
-    }
+  const { theme, setTheme } = useThemeStore();
 
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
-    } else {
-      localStorage.theme = "dark";
-    }
-  }
-
+  const toggleTheme = () => {
+    const newTheme: string = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  };
   return (
     <section className="bg-primary-light dark:bg-primary-dark relative pt-8">
       <div
@@ -31,18 +20,18 @@ export const HeroComponent = () => {
           id="heading-svg-text"
         >
           dev
-          <span className="font-sans tracking-[-0.05em] font-black">
+          <span className="font-sans tracking-[-0.075em] font-black">
             F
             <span
-              onClick={() => setTheme("light")}
-              className="text-secondary-dark dark:text-secondary-light"
+              onClick={toggleTheme}
+              className="cursor-pointer text-secondary-light"
             >
               O
             </span>
             LI
             <span
-              onClick={() => setTheme("dark")}
-              className="text-secondary-light dark:text-secondary-dark"
+              onClick={toggleTheme}
+              className="cursor-pointer text-secondary-dark"
             >
               O
             </span>
@@ -52,7 +41,6 @@ export const HeroComponent = () => {
       </div>
 
       <div className="2xl:max-w-7xl mx-auto pb-12 relative">
-        <button onClick={() => handleClick()}>j</button>
         <div className="mt-6 space-y-2">
           <div
             className="h-0.5 bg-secondary-light dark:bg-secondary-dark"

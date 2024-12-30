@@ -4,26 +4,33 @@ import { IntroComponent } from "./pages/intro";
 import { ProjectComponent } from "./pages/project";
 import { WorkExperienceCompoent } from "./pages/experience";
 import { FeatureComponent } from "./pages/features";
+import { useThemeStore } from "./store/use-theme-store";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
-import { ThemeProvider } from "./components/theme-provider.tsx";
 
 function App() {
+  const { theme } = useThemeStore();
   // useEffect(() => {
   //   AOS.init();
   // }, []);
 
   return (
-    <>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <HeroComponent />
-        <IntroComponent />
-        <ProjectComponent />
-        <WorkExperienceCompoent />
-        <FeatureComponent />
-      </ThemeProvider>
-    </>
+    <div className={theme}>
+      <Content />
+    </div>
   );
 }
 
 export default App;
+
+const Content = () => {
+  return (
+    <div>
+      <HeroComponent />
+      <IntroComponent />
+      <ProjectComponent />
+      <WorkExperienceCompoent />
+      <FeatureComponent />
+    </div>
+  );
+};
