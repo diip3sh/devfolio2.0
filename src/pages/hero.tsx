@@ -1,3 +1,4 @@
+import LiveClockUpdate from "../components/live-clock";
 import { useThemeStore } from "../store/use-theme-store";
 
 export const HeroComponent = () => {
@@ -8,10 +9,9 @@ export const HeroComponent = () => {
     setTheme(newTheme);
   };
   return (
-    <section className="bg-primary-light dark:bg-primary-dark relative pt-8">
+    <section className="px-8 bg-primary-light dark:bg-primary-dark relative pt-8">
       <div
-        // className="px-8 h-[80dvh] 2xl:max-w-7xl mx-auto grid grid-cols-3 justify-end"
-        className="px-8 2xl:max-w-7xl mx-auto"
+        className="2xl:max-w-7xl mx-auto"
         data-aos="fade-up"
         data-aos-duration="2000"
       >
@@ -24,17 +24,11 @@ export const HeroComponent = () => {
             F
             <span
               onClick={toggleTheme}
-              className="cursor-pointer text-secondary-light"
+              className="cursor-pointer text-secondary-dark dark:text-secondary-light"
             >
               O
             </span>
-            LI
-            <span
-              onClick={toggleTheme}
-              className="cursor-pointer text-secondary-dark"
-            >
-              O
-            </span>
+            LIO
           </span>
         </h1>
         {/* <div className="h-full w-full bg-secondary-light dark:secondary-dark col-span-2 rounded-xl"></div> */}
@@ -60,6 +54,8 @@ export const HeroComponent = () => {
               <span className="text-secondary-light dark:text-secondary-dark text-xs font-semibold">
                 Available for work
               </span>
+              <span className="h-auto border-secondary-light dark:border-secondary-dark border"></span>
+              <LiveClockUpdate />
             </div>
             <div>
               <ul className="items-center inline-flex gap-3 relative">
