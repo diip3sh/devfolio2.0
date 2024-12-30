@@ -15,10 +15,6 @@ module.exports = {
           light: "rgba(0, 102, 255, 1)",
           dark: "rgba(210, 248, 1, 1)",
         },
-        // secondary: "#0000ff",
-        // primary: "#fafafa",
-        //         secondary: "rgba(210, 248, 1, 1)",
-        // primary: "rgba(22, 22, 22, 1)",
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
