@@ -23,14 +23,8 @@ export const HeroComponent = () => {
           id="heading-svg-text"
         >
           dev
-          <span className="font-sans tracking-[-0.055em] font-black">
-            F
-            <span
-              onClick={toggleTheme}
-              // className="cursor-pointer text-secondary-dark dark:text-secondary-light"
-            >
-              O
-            </span>
+          <span className="tracking-[-0.055em] font-black font-sans">
+            F<span>O</span>
             LIO
           </span>
         </h1>

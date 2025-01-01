@@ -10,6 +10,13 @@
     url("./assets/fonts/Postertoaster.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "cygnito-mono";
+  src:
+    local("cygnito-mono"),
+    url("./assets/fonts/CygnitoMono.otf") format("truetype");
+}
+
 /* CSS */
 :root {
   font-family: Inter, sans-serif;

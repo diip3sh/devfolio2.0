@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         "poster-toaster": ["Postertoaster"],
+        "cygnito-mono": ['cygnito-mono']
       },
       textShadow: {
         outline:
