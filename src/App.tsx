@@ -7,31 +7,33 @@ import { FeatureComponent } from "./pages/features";
 import { useThemeStore } from "./store/use-theme-store";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ModeButton } from "./components/mode-button";
 
 function App() {
-  const { theme } = useThemeStore();
+	const { theme } = useThemeStore();
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
+	useEffect(() => {
+		AOS.init();
+	}, []);
 
-  return (
-    <div className={theme}>
-      <Content />
-    </div>
-  );
+	return (
+		<div className={theme}>
+			<Content />
+			<ModeButton />
+		</div>
+	);
 }
 
 export default App;
 
 const Content = () => {
-  return (
-    <div>
-      <HeroComponent />
-      <IntroComponent />
-      <ProjectComponent />
-      <WorkExperienceCompoent />
-      <FeatureComponent />
-    </div>
-  );
+	return (
+		<div>
+			<HeroComponent />
+			<IntroComponent />
+			<ProjectComponent />
+			<WorkExperienceCompoent />
+			<FeatureComponent />
+		</div>
+	);
 };
