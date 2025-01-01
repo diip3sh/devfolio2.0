@@ -1,26 +1,49 @@
-"use client";
-
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 
-const pathVariants: Variants = {
-  initial: { pathLength: 1, pathOffset: 0, rotate: 0 },
-  animate: {
-    pathLength: [1, 0.97, 1, 0.97, 1],
-    pathOffset: [0, 0.05, 0, 0.05, 0],
-    rotate: [0, -5, 0],
+const circleVariants: Variants = {
+  normal: {
+    opacity: 1,
+    pathLength: 1,
+    pathOffset: 0,
     transition: {
-      rotate: {
-        duration: 0.5,
-      },
-      duration: 1,
-      times: [0, 0.2, 0.4, 0.6, 1],
-      ease: "easeInOut",
+      duration: 0.4,
+      opacity: { duration: 0.1 },
+    },
+  },
+  animate: {
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    pathOffset: [1, 0],
+    transition: {
+      duration: 0.3,
+      opacity: { duration: 0.1 },
     },
   },
 };
 
-const LinkIcon = () => {
+const pathVariants: Variants = {
+  normal: {
+    opacity: 1,
+    pathLength: 1,
+    transition: {
+      delay: 0.3,
+      duration: 0.3,
+      opacity: { duration: 0.1, delay: 0.3 },
+    },
+  },
+  animate: {
+    opacity: [0, 1],
+    pathLength: [0, 1],
+    transition: {
+      delay: 0.3,
+      duration: 0.3,
+      opacity: { duration: 0.1, delay: 0.3 },
+    },
+  },
+};
+
+const AtSignIcon = () => {
   const controls = useAnimation();
 
   return (
@@ -40,19 +63,21 @@ const LinkIcon = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <motion.path
-          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          variants={pathVariants}
+        <motion.circle
+          variants={circleVariants}
           animate={controls}
+          cx="12"
+          cy="12"
+          r="4"
         />
         <motion.path
-          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
           variants={pathVariants}
           animate={controls}
+          d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"
         />
       </svg>
     </div>
   );
 };
 
-export { LinkIcon };
+export { AtSignIcon };

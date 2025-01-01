@@ -1,26 +1,15 @@
-"use client";
-
 import type { Variants } from "motion/react";
 import { motion, useAnimation } from "motion/react";
 
 const pathVariants: Variants = {
-  initial: { pathLength: 1, pathOffset: 0, rotate: 0 },
-  animate: {
-    pathLength: [1, 0.97, 1, 0.97, 1],
-    pathOffset: [0, 0.05, 0, 0.05, 0],
-    rotate: [0, -5, 0],
-    transition: {
-      rotate: {
-        duration: 0.5,
-      },
-      duration: 1,
-      times: [0, 0.2, 0.4, 0.6, 1],
-      ease: "easeInOut",
-    },
-  },
+  normal: { opacity: 1 },
+  animate: (i: number) => ({
+    opacity: [0, 1],
+    transition: { delay: i * 0.1, duration: 0.3 },
+  }),
 };
 
-const LinkIcon = () => {
+const SunIcon = () => {
   const controls = useAnimation();
 
   return (
@@ -40,19 +29,28 @@ const LinkIcon = () => {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <motion.path
-          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-          variants={pathVariants}
-          animate={controls}
-        />
-        <motion.path
-          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-          variants={pathVariants}
-          animate={controls}
-        />
+        <circle cx="12" cy="12" r="4" />
+        {[
+          "M12 2v2",
+          "m19.07 4.93-1.41 1.41",
+          "M20 12h2",
+          "m17.66 17.66 1.41 1.41",
+          "M12 20v2",
+          "m6.34 17.66-1.41 1.41",
+          "M2 12h2",
+          "m4.93 4.93 1.41 1.41",
+        ].map((d, index) => (
+          <motion.path
+            key={d}
+            d={d}
+            animate={controls}
+            variants={pathVariants}
+            custom={index + 1}
+          />
+        ))}
       </svg>
     </div>
   );
 };
 
-export { LinkIcon };
+export { SunIcon };

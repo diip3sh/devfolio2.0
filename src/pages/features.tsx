@@ -1,4 +1,5 @@
-import { FEATURES } from "../utlis/constant";
+import { TypewriteAnimation } from "../components/animation/typewriter";
+import { CONTRIBUTION_TITLE, FEATURES } from "../utlis/constant";
 
 export const FeatureComponent = () => {
   return (
@@ -15,8 +16,7 @@ export const FeatureComponent = () => {
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            <span>popular</span> <span className="font-bold">Featured</span>{" "}
-            <span className="italic">work</span>
+            <TypewriteAnimation examples={CONTRIBUTION_TITLE} />
           </h3>
           <div
             className="h-1.5 bg-secondary-light dark:bg-secondary-dark"

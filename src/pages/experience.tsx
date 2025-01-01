@@ -1,4 +1,5 @@
-import { WORK_EXPERIENCE } from "../utlis/constant";
+import { TypewriteAnimation } from "../components/animation/typewriter";
+import { WORK_EXPERIENCE, WORK_EXPERIENCE_TITLE } from "../utlis/constant";
 
 export const WorkExperienceCompoent = () => {
   return (
@@ -7,7 +8,7 @@ export const WorkExperienceCompoent = () => {
         <div className="mt-6 space-y-2">
           <div className="h-0.5 bg-secondary-light dark:bg-secondary-dark"></div>
           <h3 className="text-secondary-light dark:text-secondary-dark text-base font-medium">
-            <span>work</span> <span className="font-bold">Experience</span>
+          <TypewriteAnimation examples={WORK_EXPERIENCE_TITLE} />
           </h3>
           <div className="h-1.5 bg-secondary-light dark:bg-secondary-dark"></div>
         </div>
