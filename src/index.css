@@ -1,25 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Font */
+@font-face {
+  font-family: "Postertoaster";
+  src:
+    local("Postertoaster"),
+    url("./assets/fonts/Postertoaster.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "cygnito-mono";
+  src:
+    local("cygnito-mono"),
+    url("./assets/fonts/CygnitoMono.otf") format("truetype");
+}
+
 /* CSS */
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings:
     "liga" 1,
     "calt" 1,
-    /* Contextual Alternates */ "dlig" 1,
-    /* Discretionary Ligatures */ "ss07" 1,
-    /* fSquare punctuation */ "ss08" 1,
-    /* Square quotes */ "zero" 1,
-    /* Slashed zero */ "tnum" 1,
-    /* Tabular numbers */ "cv03",
-    /* Open six */ "cv04" 1,
-    /* Open nine */ "cv01" 1,
-    /* Alternate one */ "cv09",
-    /* Flat-top three */ "cv02" 1; /* Open 4 */
+    "dlig" 1,
+    "ss07" 1,
+    "ss08" 1,
+    "zero" 1,
+    "tnum" 1,
+    "cv03",
+    "cv04" 1,
+    "cv01" 1,
+    "cv09",
+    "cv02" 1;
 }
-#heading-svg-text {
-  font-family: "Bebas Neue", sans-serif;
+
+body * {
+  @apply transition-colors duration-200;
 }
 
 @supports (font-variation-settings: normal) {

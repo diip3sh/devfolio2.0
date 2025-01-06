@@ -3,16 +3,23 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
-        secondary: "#0000ff",
-        primary: "#fafafa",
-        // secondary: "#fcf6f5ff",
-        // primary: "#2bae66ff",
+        primary: {
+          light: "rgba(255, 255, 255, 1)",
+          dark: "rgba(22, 22, 22, 1)",
+        },
+        secondary: {
+          light: "rgba(0, 102, 255, 1)",
+          dark: "rgba(210, 248, 1, 1)",
+        },
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        "poster-toaster": ["Postertoaster"],
+        "cygnito-mono": ['cygnito-mono']
       },
       textShadow: {
         outline:
