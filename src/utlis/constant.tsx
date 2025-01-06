@@ -36,7 +36,7 @@ export const OTHERPROJECTS = [
 			"It is a comprehensive car marketplace connecting buyers, sellers, and dealers through real-time transactions. The platform offers subscription-based dealer dashboards for inventory management, while individual users can list or browse vehicles freely. Features include live updates, secure payments, and detailed vehicle analytics for informed decision-making.",
 	},
 	{
-		url: "https://note-it-omega.vercel.app",
+		url: "https://github.com/pilladipesh33/Note.it",
 		title: "Note.it",
 		description:
 			"Your all-in-one digital workspace for seamless organization and real-time collaboration. Create customizable pages, manage powerful databases, and bring ideas to life across all devices. Transform your workflow with intuitive tools designed for modern productivity.",
