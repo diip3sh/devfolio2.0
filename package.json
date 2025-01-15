@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/aos": "^3.0.7",
+    "@vercel/analytics": "^1.4.1",
     "aos": "^2.3.4",
     "motion": "^11.15.0",
     "react": "^18.3.1",
