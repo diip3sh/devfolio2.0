@@ -27,7 +27,7 @@ export const TypewriteAnimation = ({ examples }) => {
       <span className="inline-block size-2 bg-secondary-light dark:bg-secondary-dark" />
 
       <span className="ml-3 font-cygnito-mono">
-        <span>TITLE:{" "}</span>
+        <span>TITLE: </span>
         {examples[exampleIndex].split("").map((l, i) => (
           <motion.span
             initial={{

@@ -7,26 +7,26 @@ export const ProjectComponent = () => {
     return 1500 + index * 500; // Example: Increment duration by 500ms for each project
   }
   return (
-    <section className="bg-primary-light dark:bg-primary-dark">
+    <section className="bg-primary">
       <div className="px-8 2xl:max-w-7xl mx-auto py-32">
         <div className="space-y-2">
           <div
-            className="h-0.5 bg-secondary-light dark:bg-secondary-dark"
+            className="h-0.5 bg-secondary"
             data-aos="fade-up"
             data-aos-duration="1000"
           ></div>
           <h3
-            className="text-secondary-light dark:text-secondary-dark text-base font-medium"
+            className="text-secondary text-base font-medium"
             data-aos="fade-up"
             data-aos-duration="1500"
           >
             <TypewriteAnimation examples={PROJECT_TITLE} />
           </h3>
-          <div className="h-1.5 bg-secondary-light dark:bg-secondary-dark"></div>
+          <div className="h-1.5 bg-secondary"></div>
         </div>
 
         <ul
-          className="grid grid-cols-1 sm:grid-cols-2 text-secondary-light dark:text-secondary-dark md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-32"
+          className="grid grid-cols-1 sm:grid-cols-2 text-secondary md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-32"
           role="list"
         >
           {OTHERPROJECTS.map((project, index) => (
@@ -38,7 +38,7 @@ export const ProjectComponent = () => {
               <a href={project.url}>
                 <div className="h-full flex flex-col justify-between">
                   <div>
-                    <p className="group-hover:text-secondary-light/70 xl:ml-10 group-hover:dark:text-secondary-dark/70 text-secondary-light dark:text-secondary-dark text-9xl font-black lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                    <p className="group-hover:text-secondary/70 xl:ml-10 group-hover:dark:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
                       0{index + 1}.
                     </p>
                     <p className="italic shrink-0 mt-10">{project.title}</p>

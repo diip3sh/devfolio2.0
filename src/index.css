@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: rgba(22, 22, 22, 1);
+    --color-secondary: rgba(210, 248, 1, 1);
+  }
+}
+
+.theme-purple-pink {
+  --color-primary: rgba(110, 47, 229, 1);
+  --color-secondary: rgba(249, 205, 209, 1);
+}
+
+.theme-pink-purple {
+  --color-primary: rgba(242, 192, 210, 1);
+  --color-secondary: rgba(37, 9, 46, 1);
+}
+
+.theme-cobalt-white {
+  --color-primary: rgba(31, 63, 195, 1);
+  --color-secondary: rgba(239, 239, 215, 1);
+}
+
+.theme-apricot-orange {
+  --color-primary: rgba(255, 236, 174, 1);
+  --color-secondary: rgba(241, 113, 65, 1);
+}
+
+.theme-green-blue {
+  --color-primary: rgba(71, 94, 61, 1);
+  --color-secondary: rgba(185, 213, 230, 1);
+}
+
 /* Custom Font */
 @font-face {
   font-family: "Postertoaster";

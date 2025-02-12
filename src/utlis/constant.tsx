@@ -108,5 +108,15 @@ export const CONTRIBUTION_TITLE = [
   "Open Source Contributions",
   "Community Contributions",
   "Collaborative Projects",
-  "Contributions to Open Source"
+  "Contributions to Open Source",
 ];
+
+export const themes = [
+  "black",
+  "purple-pink",
+  "pink-purple",
+  "cobalt-white",
+  "green-blue",
+  "apricot-orange",
+];
+

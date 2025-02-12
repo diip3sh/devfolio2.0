@@ -7,14 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          light: "rgba(255, 255, 255, 1)",
-          dark: "rgba(22, 22, 22, 1)",
-        },
-        secondary: {
-          light: "rgba(0, 102, 255, 1)",
-          dark: "rgba(210, 248, 1, 1)",
-        },
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
