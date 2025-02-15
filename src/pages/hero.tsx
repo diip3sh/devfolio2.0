@@ -1,9 +1,44 @@
+import { useState } from "react";
 import LiveClockUpdate from "../components/live-clock";
 import { useTheme } from "../context/ThemeContext";
 import { SOCIALS_ICON_SVG, themes } from "../utlis/constant";
 
 export const HeroComponent = () => {
   const { theme, setTheme } = useTheme();
+  const [currentTheme, setCurrentTheme] = useState(themes[0]);
+
+  const getNextTheme = () => {
+    let nextTheme;
+    do {
+      nextTheme = themes[Math.floor(Math.random() * themes.length)];
+    } while (nextTheme === currentTheme);
+    return nextTheme;
+  };
+
+  const handleThemeChange = () => {
+    const newTheme = getNextTheme();
+    setCurrentTheme(newTheme);
+    setTheme(newTheme);
+  };
+
+  const getGradient = (theme: string) => {
+    switch (theme) {
+      case "black":
+        return "bg-gradient-to-r from-gray-900 to-gray-600";
+      case "purple-pink":
+        return "bg-gradient-to-r from-purple-500 to-pink-500";
+      case "pink-purple":
+        return "bg-gradient-to-r from-pink-500 to-purple-500";
+      case "cobalt-white":
+        return "bg-gradient-to-r from-blue-600 to-white";
+      case "green-blue":
+        return "bg-gradient-to-r from-green-400 to-blue-500";
+      case "apricot-orange":
+        return "bg-gradient-to-r from-yellow-200 to-orange-500";
+      default:
+        return "bg-gray-200";
+    }
+  };
 
   return (
     <section className={`px-8 bg-primary relative pt-8 theme-${theme}`}>
@@ -50,13 +85,6 @@ export const HeroComponent = () => {
             </div>
             <div>
               <ul className="items-center inline-flex gap-3 relative">
-                <li>
-                  {themes.map((color) => (
-                    <div className="cursor-pointer" key={color} onClick={() => setTheme(color)}>
-                      {color}
-                    </div>
-                  ))}
-                </li>
                 {SOCIALS_ICON_SVG.map((item, index) => (
                   <li key={index}>
                     <a
@@ -67,6 +95,12 @@ export const HeroComponent = () => {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <div
+                    className={`cursor-pointer outline-dotted outline-2 outline-primary h-5 w-5 rounded-full ${getGradient(currentTheme)}`}
+                    onClick={() => handleThemeChange()}
+                  ></div>
+                </li>
               </ul>
             </div>
           </div>

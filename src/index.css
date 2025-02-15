@@ -20,8 +20,8 @@
 }
 
 .theme-cobalt-white {
-  --color-primary: rgba(31, 63, 195, 1);
-  --color-secondary: rgba(239, 239, 215, 1);
+  --color-secondary: rgba(31, 63, 195, 1);
+  --color-primary: rgba(239, 239, 215, 1);
 }
 
 .theme-apricot-orange {
@@ -30,8 +30,8 @@
 }
 
 .theme-green-blue {
-  --color-primary: rgba(71, 94, 61, 1);
-  --color-secondary: rgba(185, 213, 230, 1);
+  --color-secondary: rgba(71, 94, 61, 1);
+  --color-primary: rgba(185, 213, 230, 1);
 }
 
 /* Custom Font */

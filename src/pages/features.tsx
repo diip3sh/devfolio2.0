@@ -3,7 +3,7 @@ import { CONTRIBUTION_TITLE, FEATURES } from "../utlis/constant";
 
 export const FeatureComponent = () => {
   return (
-    <section className="bg-primary">
+    <section className="bg-primary overflow-hidden">
       <div className="px-8 2xl:max-w-7xl mx-auto py-6">
         <div className="mt-32 space-y-2">
           <div

@@ -15,7 +15,7 @@ const LiveClockUpdate = () => {
 
   return (
     <div>
-      <span className="hidden md:block text-secondary-light dark:text-secondary-dark text-xs font-semibold">
+      <span className="hidden md:block text-secondary text-xs font-semibold">
         {date.toLocaleTimeString()} IN
       </span>
     </div>
