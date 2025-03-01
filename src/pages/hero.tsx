@@ -51,12 +51,9 @@ export const HeroComponent = () => {
           className="font-poster-toaster text-[20dvw] 2xl:text-[16dvw] leading-[10dvw] tracking-[-0.055em] text-secondary text-center"
           id="heading-svg-text"
         >
-          dev
-          <span className="tracking-[-0.055em] font-black font-sans">
-            F<span>O</span>
-            LIO
-          </span>
+          Hello WoRld!
         </h1>
+
         <div className="h-full w-full bg-secondary col-span-2 rounded-xl"></div>
       </div>
 
@@ -74,7 +71,7 @@ export const HeroComponent = () => {
           >
             <div className="flex gap-3 items-center">
               <h3 className="text-secondary text-xs font-medium">
-                <span className="font-bold">Creative Front-End developer</span>
+                <span className="font-bold">Creative Front-End Developer</span>
               </h3>
               <span className="h-auto border-secondary border"></span>
               <span className="text-secondary text-xs font-semibold">
